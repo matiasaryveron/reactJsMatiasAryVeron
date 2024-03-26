@@ -1,12 +1,13 @@
-import { ShoppingCartOutlined } from "antd";
+import React from 'react';
+import { ShoppingCartOutlined } from '@ant-design/icons';
 
 function CartWidget() {
   return (
     <div>
       <ShoppingCartOutlined />
-       <span>0</span>
-      </div>
-  )
+      <span>0</span>
+    </div>
+  );
 }
 
-export default CartWidget
+export default CartWidget;
