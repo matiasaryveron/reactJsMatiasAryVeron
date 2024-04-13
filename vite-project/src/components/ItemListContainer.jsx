@@ -1,11 +1,20 @@
-import React from 'react'
+import data from "./data.json"
 
-function ItemListContainer(props) {
-  return (
-    <div>
-        <h2 className='text-6xl text-start py-10'>{props.greeting}</h2>
-    </div>
-  )
-}
+
+function IntemListContainer(){
+  const {id} = useParams()
+  useEffect(()=>{
+
+const miPromesa = new Promise ((res)=>{
+  setTimeout(()=>{
+    res(data)
+  },2000)
+})
+miPromesa.then((res)=>{
+  console.log (res)
+})
+miPromesa.catch(()=> console.log ("mal"))
+miPromesa.finally(()=> console.log ("fin"))
+})}
 
 export default ItemListContainer

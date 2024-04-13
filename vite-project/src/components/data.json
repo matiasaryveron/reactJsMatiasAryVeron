@@ -1,0 +1,27 @@
+[
+    {"id": 1,
+"product": "Consola" ,
+"name": "Playstation 5 con lectora",
+"price": "1000 USD",
+"img":"https://nextgames.com.ar/img/Public/1040-producto-ps5-1-2038.jpg"},
+
+{"id": 2,
+"product": "Consola" ,
+"name": "Playstation 5 digital",
+"price": "900 USD",
+"img": "https://dcdn.mitiendanube.com/stores/003/017/462/products/ps5-digital-1-0f871641e32738b5a817032681468828-1024-1024.jpg"
+},
+{"id": 3,
+"product": "Consola" ,
+"name": "Xbox Series X",
+"price": "800 USD",
+"img": "https://http2.mlstatic.com/D_NQ_NP_877720-MLU72639787401_112023-O.webp"
+},
+{"id": 4,
+"product": "Consola" ,
+"name": "Xbox Series S",
+"price": "500 USD",
+"img":"https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
+}
+]
+
