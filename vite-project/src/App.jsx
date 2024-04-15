@@ -2,6 +2,7 @@ import {BrowserRouter} from "react-router-dom"
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar.jsx'
+import ItemList from "./components/ItemList.jsx"
 
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
   return (
     <>
     <Navbar />
+    <ItemList/>
+    
     </>
   )
 }

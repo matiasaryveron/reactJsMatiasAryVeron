@@ -1,7 +1,9 @@
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import data from "./data.json"
 
 
-function IntemListContainer(){
+function ItemListContainer(){
   const {id} = useParams()
   useEffect(()=>{
 
@@ -13,8 +15,12 @@ const miPromesa = new Promise ((res)=>{
 miPromesa.then((res)=>{
   console.log (res)
 })
-miPromesa.catch(()=> console.log ("mal"))
-miPromesa.finally(()=> console.log ("fin"))
-})}
+miPromesa.catch(() => console.log('mal'));
+miPromesa.finally(() => console.log('fin'));
+}, [])
+
+ return <div>Este es el ItemListContainer</div>;
+}
+
 
 export default ItemListContainer
