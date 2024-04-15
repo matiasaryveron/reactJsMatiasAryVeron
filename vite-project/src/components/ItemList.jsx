@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemListContainer from "./ItemListContainer.jsx"
 import CardProduct from './CardProduct.jsx'
 
 function ItemList() {
