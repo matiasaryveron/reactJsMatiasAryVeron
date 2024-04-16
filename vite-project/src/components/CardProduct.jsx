@@ -1,16 +1,20 @@
-import React from 'react'
+import React from 'react';
 import { Button } from "antd";
 
-function CardProduct(props) {
+function CardProduct({product}) {
   return (
-    <div className="user-card">
-        <img src="" alt="" />
-        <li>{props.product}</li>
-        <li>{props.name}</li>
-        <li>{props.price}</li>
+    <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+      <img src={product.img} alt={product.product} className="w-full h-48 object-contain" />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{product.product}</div>
+        <p className="text-gray-700 text-base">{product.name}</p>
+        <p className="text-gray-700 text-base">{product.price}</p>
+      </div>
+      <div className="px-6 py-4">
         <Button>Agregar</Button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default CardProduct
+export default CardProduct;
