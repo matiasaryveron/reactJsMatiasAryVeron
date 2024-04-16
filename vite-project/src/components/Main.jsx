@@ -8,7 +8,7 @@ import Juegos from './Juegos'
 
 function Main() {
   return (
-    <main className='p-4 text-white grow mi-main bg-slate-600'>
+    <main className='p-4 text-black grow mi-main bg-white'>
  <Routes>
 
 <Route path='/' element={<Home/>} />
