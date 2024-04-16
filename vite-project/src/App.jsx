@@ -1,6 +1,7 @@
 import {BrowserRouter} from "react-router-dom"
 import Navbar from './components/Navbar.jsx'
-import ItemListContainer from "./components/ItemListContainer.jsx"
+import { Home } from "lucide-react"
+import Footer from "./components/Footer.jsx"
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
-    <ItemListContainer/>
+    <Home />
+    <Footer />
     </BrowserRouter>
 )
 }
