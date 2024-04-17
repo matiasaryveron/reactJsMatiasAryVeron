@@ -33,8 +33,9 @@ miPromesa.finally(() => console.log('fin'));
             <img src={product.img} alt="" />
             <p>{product.product}</p>
             <p>{product.name}</p>
-            <p>{product.price}</p>
-            <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p>
+            <p>{product.price}</p><div key={index}
+          className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
+            <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p></div>
             <Button>Comprar</Button>
           </div>
         ))

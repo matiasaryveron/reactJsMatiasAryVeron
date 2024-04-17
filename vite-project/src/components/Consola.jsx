@@ -4,7 +4,8 @@ function Consola({product}) {
   return (
     (
         product.map((product, index) => (
-          <div key={index}>
+          <div key={index}
+          className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
             <h2>{product.name}</h2>
             <img src={product.img} alt="" />
             <p>{product.product}</p>
