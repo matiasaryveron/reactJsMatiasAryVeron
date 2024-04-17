@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ItemListContainer from './ItemListContainer'
-import Consolas from './Consolas'
+import Productos from './Productos'
 import Contactos from './Contactos'
 import Juegos from './Juegos'
 import ConsolaContainer from './ConsolaContainer'
@@ -13,7 +13,7 @@ function Main() {
 
 <Route path='/' element={<ItemListContainer/>} />
 
-<Route path='/consols' element={<Consolas/>} />
+<Route path='/consols' element={<Productos/>} />
 
 <Route path= '/:id' element={<ConsolaContainer/>} />
 

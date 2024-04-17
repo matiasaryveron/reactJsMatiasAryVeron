@@ -1,12 +1,12 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer'
-function Consolas() {
+function Productos() {
   return (
     <>
-    <div>Consolas</div>
+    <div>Productos</div>
     <ItemListContainer></ItemListContainer>
     </>
   )
 }
 
-export default Consolas
+export default Productos
