@@ -1,22 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { Button } from 'antd';
 
-function Consola({product}) {
+const Consola = ({ product }) => {
   return (
-    (
-        product.map((product, index) => (
-          <div key={index}
-          className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
-            <h2>{product.name}</h2>
-            <img src={product.img} alt="" />
-            <p>{product.product}</p>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-            <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p>
-            <Button>Comprar</Button>
+    <div className="flex justify-center items-center h-screen">
+    <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+      {product.map((product, index) => (
+        <div key={index} className="text-center">
+          <h2 className="text-lg font-bold mb-2">{product.name}</h2>
+          <img src={product.img} alt={product.name} className="mx-auto mb-2 rounded-lg" style={{ maxWidth: '200px' }} />
+          <p className="text-sm mb-2">{product.product}</p>
+          <p className="text-sm mb-2">{product.name}</p>
+          <p className="text-sm mb-4">{product.price}</p>
+          <div className={`p-2 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'} rounded-lg mb-2`}>
+            <strong className="text-xs">{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</strong>
           </div>
-        ))
-      ) 
-  )
-}
+          <Button size="small">Comprar</Button>
+        </div>
+      ))}
+    </div>
+  </div>
+  );
+};
 
-export default Consola
+export default Consola;
