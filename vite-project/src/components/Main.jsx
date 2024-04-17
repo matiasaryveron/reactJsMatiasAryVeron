@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Inicio'
+import ItemListContainer from './ItemListContainer'
 import Consolas from './Consolas'
 import Contactos from './Contactos'
 import Juegos from './Juegos'
@@ -11,7 +11,7 @@ function Main() {
     <main className='p-4 text-black grow mi-main bg-white'>
  <Routes>
 
-<Route path='/' element={<Home/>} />
+<Route path='/' element={<ItemListContainer/>} />
 
 <Route path='/consols' element={<Consolas/>} />
 

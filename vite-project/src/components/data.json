@@ -26,6 +26,39 @@
 "price": "500 USD",
 "stock": 5,
 "img":"https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
+},
+{"id": 5,
+"product": "Juego" ,
+"name": "Final Fantasy VII Rebirth",
+"price": "65.00 USD",
+"plataform": "PS5",
+"stock":10,
+"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-ffvii.jpeg"
+},
+{"id": 6,
+"product": "Juego" ,
+"name": "Tekken 8",
+"price": "65.00 USD",
+"plataform": "PS5",
+"stock":15,
+"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-938164.jpg"
+},
+{"id": 7,
+"product": "Juego" ,
+"name": "Metal Gear Solid Delsta",
+"price": "80.00 USD",
+"plataform": "PS5 Xbox" ,
+"stock":0,
+"img": "https://www.cdmarket.com.ar/Image/0/400_400-delta_snake.jpeg"
+},
+{"id": 8,
+"product": "Juego" ,
+"name": "EA Sports FC 24",
+"price": "40.00 USD",
+"plataform": "PS5 Xbox" ,
+"stock":6,
+"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-61bM-QMyAwL._AC_UY327_FMwebp_QL61.jpg"
+    
 }
 ]
 
