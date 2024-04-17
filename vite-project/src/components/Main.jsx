@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ItemListContainer from './ItemListContainer'
 import Productos from './Productos'
-import Contactos from './Contactos'
+import Consolas from './Consolas'
 import Juegos from './Juegos'
 import ConsolaContainer from './ConsolaContainer'
 
@@ -19,7 +19,7 @@ function Main() {
 
 <Route path='/games' element={<Juegos/>} />
 
-<Route path='/contact' element={<Contactos/>} />
+<Route path='/contact' element={<Consolas/>} />
 
 <Route path="*" element={<p>No encontrado</p>} />
 

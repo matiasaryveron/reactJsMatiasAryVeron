@@ -13,7 +13,7 @@ function Navbar() {
           <Link to="/" className= "transition ease-in-out delay-150 hover:scale-110  duration-300 rounded hover:rounded-lg">Inicio</Link>
           <Link to="consols" className= "transition ease-in-out delay-150 hover:scale-110  duration-300 rounded hover:rounded-lg">Productos</Link>
           <Link to="games" className= "transition ease-in-out delay-150 hover:scale-110 duration-300 rounded hover:rounded-lg">Juegos</Link>
-          <Link to="contact" className= "transition ease-in-out delay-150 hover:scale-110 duration-300 rounded hover:rounded-lg">Contacto</Link>
+          <Link to="contact" className= "transition ease-in-out delay-150 hover:scale-110 duration-300 rounded hover:rounded-lg">Consolas</Link>
           <CartWidget />
         </nav>
       </header>
