@@ -13,7 +13,7 @@ function Main() {
 
 <Route path='/' element={<ItemListContainer/>} />
 
-<Route path='/consols' element={<Productos/>} />
+<Route path='/products' element={<Productos/>} />
 
 <Route path= '/:id' element={<ConsolaContainer/>} />
 
