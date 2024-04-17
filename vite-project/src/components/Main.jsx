@@ -4,7 +4,7 @@ import Home from './Inicio'
 import Consolas from './Consolas'
 import Contactos from './Contactos'
 import Juegos from './Juegos'
-
+/* import ConsolaContainer from './ConsolaContainer' */
 
 function Main() {
   return (
@@ -15,7 +15,7 @@ function Main() {
 
 <Route path='/consols' element={<Consolas/>} />
 
-{/* <Route path= '/:id' element={<Consola/>} /> */}
+{/* <Route path= '/:id' element={<ConsolaContainer/>} /> */}
 
 <Route path='/games' element={<Juegos/>} />
 
