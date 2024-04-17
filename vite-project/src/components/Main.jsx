@@ -13,13 +13,13 @@ function Main() {
 
 <Route path='/' element={<ItemListContainer/>} />
 
-<Route path='/products' element={<Productos/>} />
+<Route path='/productos' element={<Productos/>} />
 
 <Route path= '/:id' element={<ConsolaContainer/>} />
 
-<Route path='/games' element={<Juegos/>} />
+<Route path='/juegos' element={<Juegos/>} />
 
-<Route path='/contact' element={<Consolas/>} />
+<Route path='/consolas' element={<Consolas/>} />
 
 <Route path="*" element={<p>No encontrado</p>} />
 
