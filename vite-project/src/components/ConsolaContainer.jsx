@@ -3,7 +3,6 @@ import data from "./data.json";
 import { useParams } from "react-router-dom"
 import {Button} from 'antd'
 
-
 function ConsolasContainer(){
   const [product, setProducts] = useState ([])
   const params = useParams()
@@ -16,13 +15,15 @@ const miPromesa = new Promise ((res)=>{
   },1000)
 })
 miPromesa
-.then((res)=>{
-  setProducts(res)
-  console.log (res)
-})
-.catch(() => console.log('mal'));
-miPromesa.finally(() => console.log('fin'));
-}, [])
+    .then((res) => {
+      const id = +params.id;
+      const encontprod = res.find(item => item.id === id) || {};
+      setProducts([encontprod]);
+    })
+    .catch(() => console.log('mal'));
+
+  miPromesa.finally(() => console.log('fin'));
+}, [params.id])
 
  return (
   <>
@@ -35,7 +36,7 @@ miPromesa.finally(() => console.log('fin'));
             <p>{product.name}</p>
             <p>{product.price}</p><div key={index}
           className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
-            <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p></div>
+            <strong>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</strong></div>
             <Button>Comprar</Button>
           </div>
         ))
