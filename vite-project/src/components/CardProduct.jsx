@@ -10,6 +10,9 @@ function CardProduct({product}) {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{product.product}</div>
         <p className="text-gray-700 text-base">{product.name}</p>
+        <p>{product.price}</p>
+        <div className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
+            <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p></div>
       </div>
       <div className="px-6 py-4">
         <Link to={`/${product.id}`}>Ver mas</Link>
