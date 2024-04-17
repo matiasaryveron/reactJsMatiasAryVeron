@@ -45,4 +45,4 @@ miPromesa.finally(() => console.log('fin'));
  );
 }
 
-export default ConsolaContainer
+export default ConsolasContainer
