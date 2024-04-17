@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from "antd";
+import { Link } from "react-router-dom";
+
 
 function CardProduct({product}) {
   return (
@@ -11,7 +12,7 @@ function CardProduct({product}) {
         <p className="text-gray-700 text-base">{product.price}</p>
       </div>
       <div className="px-6 py-4">
-        <Button>Agregar</Button>
+        <Link to={`/${product.id}`}>Ver mas</Link>
       </div>
     </div>
   );

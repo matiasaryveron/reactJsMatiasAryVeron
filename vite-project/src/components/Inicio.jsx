@@ -2,7 +2,11 @@ import React from 'react'
 
 function Inicio() {
   return (
-    <div>Home</div>
+    <div>
+      <h1>INICIO</h1>
+      <p>Carousel</p>
+
+    </div>
   )
 }
 
