@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import data from "./data.json";
 import { useParams } from "react-router-dom"
+import {Button} from 'antd'
 
 
 function ConsolasContainer(){
-  const [products, setProducts] = useState ([])
+  const [product, setProducts] = useState ([])
   const params = useParams()
 
 useEffect(()=>{
@@ -25,8 +26,8 @@ miPromesa.finally(() => console.log('fin'));
 
  return (
   <>
-   {products.length !== 0 ? (
-        products.map((product, index) => (
+   {product.length !== 0 ? (
+        product.map((product, index) => (
           <div key={index}>
             <h2>{product.name}</h2>
             <img src={product.img} alt="" />
@@ -34,6 +35,7 @@ miPromesa.finally(() => console.log('fin'));
             <p>{product.name}</p>
             <p>{product.price}</p>
             <p>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</p>
+            <Button>Comprar</Button>
           </div>
         ))
       ) : (

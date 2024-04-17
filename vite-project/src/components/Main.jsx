@@ -15,7 +15,7 @@ function Main() {
 
 <Route path='/consols' element={<Consolas/>} />
 
-{/* <Route path= '/:id' element={<ConsolaContainer/>} /> */}
+<Route path= '/:id' element={<ConsolaContainer/>} />{/*  */}
 
 <Route path='/games' element={<Juegos/>} />
 
