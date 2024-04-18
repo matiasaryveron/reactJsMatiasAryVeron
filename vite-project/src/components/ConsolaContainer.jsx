@@ -12,7 +12,7 @@ useEffect(()=>{
 const miPromesa = new Promise ((res)=>{
   setTimeout(()=>{
     res(data)
-  },1000)
+  },)
 })
 miPromesa
     .then((res) => {
