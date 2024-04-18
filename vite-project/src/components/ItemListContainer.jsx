@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import data from "./data.json";
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList';
-import { Filter } from 'lucide-react';
+
 
 function ItemListContainer(){
   const [products, setProducts] = useState ([])
   const params = useParams()
-console.log(params)
+
 useEffect(()=>{
 
 const miPromesa = new Promise ((res)=>{
@@ -17,15 +17,13 @@ const miPromesa = new Promise ((res)=>{
 })
 miPromesa
 .then((res)=>{
-  console.log(params.id)
-  console.log(res)
   if (params.id) {
     const filterProducts = res.filter((product) => product.product.toLowerCase() == params.id)
     setProducts(filterProducts)
   return 
   }
   setProducts(res)
-  console.log (res)
+  
 })
 .catch(() => console.log('mal'));
 miPromesa.finally(() => console.log('fin'));

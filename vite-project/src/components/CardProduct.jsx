@@ -15,7 +15,7 @@ function CardProduct({product}) {
             <strong>{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</strong></div>
       </div>
       <div className="px-6 py-4">
-        <Link to={`item/${product.id}`}>Ver mas</Link>
+        <Link to={`/item/${product.id}`}>Ver mas</Link>
       </div>
     </div>
     </div>

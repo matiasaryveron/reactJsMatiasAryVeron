@@ -2,8 +2,6 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ItemListContainer from './ItemListContainer'
 import Productos from './Productos'
-import Consolas from './Consolas'
-import Juegos from './Juegos'
 import ConsolaContainer from './ConsolaContainer'
 
 function Main() {
@@ -19,8 +17,6 @@ function Main() {
 <Route path= 'item/:id' element={<ConsolaContainer/>} />
 
 <Route path='category/:id' element={<ItemListContainer/>} />
-
-{/* <Route path='category/consolas' element={<Consolas/>} /> */}
 
 <Route path="*" element={<p>No encontrado</p>} />
 
