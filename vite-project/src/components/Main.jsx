@@ -16,11 +16,11 @@ function Main() {
 
 <Route path='/productos' element={<Productos/>} />
 
-<Route path= '/:id' element={<ConsolaContainer/>} />
+<Route path= 'item/:id' element={<ConsolaContainer/>} />
 
-<Route path='/juegos' element={<Juegos/>} />
+<Route path='category/:id' element={<ItemListContainer/>} />
 
-<Route path='/consolas' element={<Consolas/>} />
+{/* <Route path='category/consolas' element={<Consolas/>} /> */}
 
 <Route path="*" element={<p>No encontrado</p>} />
 
