@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { MenuOutlined } from '@ant-design/icons';
 import CartWidget from "./CartWidget.jsx";
+import { contexto } from "../contexto.jsx";
+
+
 
 function Navbar() {
+
+    const elValorDelContexto = useContext(contexto)
+
     const [verProductosMenu, setVerProductosMenu] = useState(false);
 
     const mostrarProductosMenu = () => {
@@ -43,6 +49,7 @@ function Navbar() {
                     <Link to="category/juegos" onClick={cerrarProductosMenu} className="block py-2 px-4 text-white">Juegos</Link>
                     <Link to="category/consolas" onClick={cerrarProductosMenu} className="block py-2 px-4 text-white">Consolas</Link>
                 </div>
+                
             )}
         </>
     );

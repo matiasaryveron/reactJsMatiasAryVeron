@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import { contexto } from '../contexto';
+import ContadorComprar from './ContadorComprar';
+
+
 
 function CartWidget() {
+
+  const { cantCarrito } = useContext(contexto);
+
+
   return (
     <div>
       <ShoppingCartOutlined />
-      <span>0</span>
+      <span>{cantCarrito}</span>
     </div>
   );
 }

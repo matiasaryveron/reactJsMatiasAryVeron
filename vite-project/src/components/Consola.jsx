@@ -1,7 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
+import ContadorComprar from './ContadorComprar';
 
 const Consola = ({ product }) => {
+  const handleConfirm = () => {
+    console.log (numero, product)
+  };
   return (
     <div className="flex justify-center items-center h-screen">
     <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
@@ -13,9 +16,9 @@ const Consola = ({ product }) => {
           <p className="text-sm mb-2">{product.name}</p>
           <p className="text-sm mb-4">{product.price}</p>
           <div className={`p-2 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'} rounded-lg mb-2`}>
-            <strong className="text-xs">{product.stock > 0 ? 'Stock Disponible' : 'Sin Stock'}</strong>
+            <strong className="text-xs">{product.stock > 0 ? 'Stock Disponible ✅' : 'Sin Stock ⛔'}</strong>
           </div>
-          <Button size="small">Comprar</Button>
+          <ContadorComprar handleConfirm={handleConfirm}/>
         </div>
       ))}
     </div>
