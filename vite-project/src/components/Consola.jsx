@@ -18,7 +18,7 @@ const Consola = ({ product }) => {
           <div className={`p-2 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'} rounded-lg mb-2`}>
             <strong className="text-xs">{product.stock > 0 ? 'Stock Disponible ✅' : 'Sin Stock ⛔'}</strong>
           </div>
-          <ContadorComprar handleConfirm={handleConfirm}/>
+          <ContadorComprar handleConfirm={handleConfirm} />
         </div>
       ))}
     </div>
