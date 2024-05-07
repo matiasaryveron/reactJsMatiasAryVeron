@@ -10,7 +10,7 @@ function CardProduct({product}) {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{product.product}</div>
         <p className="text-gray-700 text-base">{product.name}</p>
-        <p>{product.price}</p>
+        <p>{product.price.amount} {product.price.currency}</p>
         <div className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >
             <strong>{product.stock > 0 ? 'Stock Disponible ✅' : 'Sin Stock ⛔'}</strong></div>
       </div>

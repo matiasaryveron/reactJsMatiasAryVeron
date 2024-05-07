@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import data from "./data.json";
 import { useParams } from "react-router-dom"
-import Consola from "./Consola"
+import ItemDetail from "./ItemDetail"
 
 function ConsolasContainer(){
   const [product, setProducts] = useState ([])
@@ -27,7 +27,7 @@ miPromesa
 
  return (
   <>
-   <Consola product={product} />
+   <ItemDetail product={product} />
   </>
  );
 }

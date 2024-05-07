@@ -1,7 +1,7 @@
 import React from 'react';
-import ContadorComprar from './ContadorComprar';
+import ItemCount from './ItemCount.jsx';
 
-const Consola = ({ product }) => {
+const ItemDetail = ({ product }) => {
   const handleConfirm = () => {
     console.log (numero, product)
   };
@@ -14,11 +14,11 @@ const Consola = ({ product }) => {
           <img src={product.img} alt={product.name} className="mx-auto mb-2 rounded-lg" style={{ maxWidth: '200px' }} />
           <p className="text-sm mb-2">{product.product}</p>
           <p className="text-sm mb-2">{product.name}</p>
-          <p className="text-sm mb-4">{product.price}</p>
+          <p className="text-sm mb-4">{product.price.amount} {product.price.currency}</p>
           <div className={`p-2 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'} rounded-lg mb-2`}>
             <strong className="text-xs">{product.stock > 0 ? 'Stock Disponible ✅' : 'Sin Stock ⛔'}</strong>
           </div> {product.stock > 0 && ( 
-              <ContadorComprar handleConfirm={handleConfirm} />
+              <ItemCount handleConfirm={handleConfirm} />
             )}
         </div>
       ))}
@@ -27,4 +27,4 @@ const Consola = ({ product }) => {
   );
 };
 
-export default Consola;
+export default ItemDetail;

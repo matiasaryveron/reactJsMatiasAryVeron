@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "antd";
 
-function ContadorComprar(props) {
+function ItemCount(props) {
 
     const [numero, setNumero] = useState(1)
 
@@ -27,4 +27,4 @@ function ContadorComprar(props) {
     )
     
 }
-export default ContadorComprar
+export default ItemCount

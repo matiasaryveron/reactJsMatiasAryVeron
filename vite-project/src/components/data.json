@@ -1,64 +1,94 @@
 [
-    {"id": 1,
-"product": "Consolas" ,
-"name": "Playstation 5 con lectora",
-"price": "1000 USD",
-"stock":1,
-"img":"https://nextgames.com.ar/img/Public/1040-producto-ps5-1-2038.jpg"},
-
-{"id": 2,
-"product": "Consolas" ,
-"name": "Playstation 5 digital",
-"price": "900 USD",
-"stock":0,
-"img": "https://dcdn.mitiendanube.com/stores/003/017/462/products/ps5-digital-1-0f871641e32738b5a817032681468828-1024-1024.jpg"
-},
-{"id": 3,
-"product": "Consolas" ,
-"name": "Xbox Series X",
-"price": "800 USD",
-"stock":5,
-"img": "https://i5.walmartimages.com/seo/Xbox-Series-X-Video-Game-Console-Black_9f8c06f5-7953-426d-9b68-ab914839cef4.5f15be430800ce4d7c3bb5694d4ab798.jpeg"
-},
-{"id": 4,
-"product": "Consolas" ,
-"name": "Xbox Series S",
-"price": "500 USD",
-"stock": 5,
-"img":"https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
-},
-{"id": 5,
-"product": "Juegos" ,
-"name": "Final Fantasy VII Rebirth",
-"price": "65.00 USD",
-"plataform": "PS5",
-"stock":10,
-"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-ffvii.jpeg"
-},
-{"id": 6,
-"product": "Juegos" ,
-"name": "Tekken 8",
-"price": "65.00 USD",
-"plataform": "PS5",
-"stock":15,
-"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-938164.jpg"
-},
-{"id": 7,
-"product": "Juegos" ,
-"name": "Metal Gear Solid Delta",
-"price": "80.00 USD",
-"plataform": "PS5 Xbox" ,
-"stock":0,
-"img": "https://www.cdmarket.com.ar/Image/0/400_400-delta_snake.jpeg"
-},
-{"id": 8,
-"product": "Juegos" ,
-"name": "EA Sports FC 24",
-"price": "40.00 USD",
-"plataform": "PS5 Xbox" ,
-"stock":6,
-"img": "https://www.cdmarket.com.ar/Image/0/1920_1080-61bM-QMyAwL._AC_UY327_FMwebp_QL61.jpg"
-    
-}
+    {
+        "id": 1,
+        "product": "Consolas",
+        "name": "Playstation 5 con lectora",
+        "price": {
+            "amount": 1000,
+            "currency": "USD"
+        },
+        "stock": 1,
+        "img": "https://nextgames.com.ar/img/Public/1040-producto-ps5-1-2038.jpg"
+    },
+    {
+        "id": 2,
+        "product": "Consolas",
+        "name": "Playstation 5 digital",
+        "price": {
+            "amount": 900,
+            "currency": "USD"
+        },
+        "stock": 0,
+        "img": "https://dcdn.mitiendanube.com/stores/003/017/462/products/ps5-digital-1-0f871641e32738b5a817032681468828-1024-1024.jpg"
+    },
+    {
+        "id": 3,
+        "product": "Consolas",
+        "name": "Xbox Series X",
+        "price": {
+            "amount": 800,
+            "currency": "USD"
+        },
+        "stock": 5,
+        "img": "https://i5.walmartimages.com/seo/Xbox-Series-X-Video-Game-Console-Black_9f8c06f5-7953-426d-9b68-ab914839cef4.5f15be430800ce4d7c3bb5694d4ab798.jpeg"
+    },
+    {
+        "id": 4,
+        "product": "Consolas",
+        "name": "Xbox Series S",
+        "price": {
+            "amount": 500,
+            "currency": "USD"
+        },
+        "stock": 5,
+        "img": "https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
+    },
+    {
+        "id": 5,
+        "product": "Juegos",
+        "name": "Final Fantasy VII Rebirth",
+        "price": {
+            "amount": 65,
+            "currency": "USD"
+        },
+        "plataform": "PS5",
+        "stock": 10,
+        "img": "https://www.cdmarket.com.ar/Image/0/1920_1080-ffvii.jpeg"
+    },
+    {
+        "id": 6,
+        "product": "Juegos",
+        "name": "Tekken 8",
+        "price": {
+            "amount": 65,
+            "currency": "USD"
+        },
+        "plataform": "PS5",
+        "stock": 15,
+        "img": "https://www.cdmarket.com.ar/Image/0/1920_1080-938164.jpg"
+    },
+    {
+        "id": 7,
+        "product": "Juegos",
+        "name": "Metal Gear Solid Delta",
+        "price": {
+            "amount": 80,
+            "currency": "USD"
+        },
+        "plataform": "PS5 Xbox",
+        "stock": 0,
+        "img": "https://www.cdmarket.com.ar/Image/0/400_400-delta_snake.jpeg"
+    },
+    {
+        "id": 8,
+        "product": "Juegos",
+        "name": "EA Sports FC 24",
+        "price": {
+            "amount": 40,
+            "currency": "USD"
+        },
+        "plataform": "PS5 Xbox",
+        "stock": 6,
+        "img": "https://www.cdmarket.com.ar/Image/0/1920_1080-61bM-QMyAwL._AC_UY327_FMwebp_QL61.jpg"
+    }
 ]
-
