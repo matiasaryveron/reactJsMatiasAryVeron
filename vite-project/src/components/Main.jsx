@@ -22,12 +22,7 @@ function Main() {
 
 </Routes>
 
-
-
-
-
-
-    </main>
+</main>
   )
 }
 
