@@ -10,7 +10,9 @@ function CarritoProvider (props){
 
 
 
-const agregarAlCarrito = (item) =>{}
+const agregarAlCarrito = (item) =>{
+  
+}
 
 const borrarDelCarrito = (id) => {}
 
