@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import ItemListContainer from './ItemListContainer'
 import Productos from './Productos'
 import ConsolaContainer from './ConsolaContainer'
+import Carrito from './Carrito'
 
 function Main() {
   return (
@@ -17,6 +18,8 @@ function Main() {
 <Route path= 'item/:id' element={<ConsolaContainer/>} />
 
 <Route path='category/:id' element={<ItemListContainer/>} />
+
+<Route path='/cart' element={<Carrito/>} />
 
 <Route path="*" element={<p>No encontrado</p>} />
 
