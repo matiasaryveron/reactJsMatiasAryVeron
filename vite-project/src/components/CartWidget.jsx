@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { contexto } from '../contexto';
+import { Link } from 'react-router-dom';
 
 function CartWidget() {
 
@@ -8,10 +9,14 @@ function CartWidget() {
 
 
   return (
+    <>
+    <Link to="/cart">
     <div>
       <ShoppingCartOutlined />
       <span>{cantCarrito}</span>
     </div>
+    </Link>
+    </>
   );
 }
 

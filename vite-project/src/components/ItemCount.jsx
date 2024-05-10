@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "antd";
+import Swal from 'sweetalert2';
 
 function ItemCount(props) {
 
@@ -13,6 +14,7 @@ function ItemCount(props) {
     }
     const confirmar = () => {
         props.handleConfirm(numero)
+        Swal.fire("¡Producto agregado!", "", "success");
     }
     return (
         <>
