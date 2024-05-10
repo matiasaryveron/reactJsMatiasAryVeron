@@ -5,10 +5,11 @@ import {contexto} from '../contexto.jsx';
 function ItemDetail({ product }) {
 
   const valorActual = useContext(contexto);
-  console.log(valorActual)
+  
   const handleConfirm = (numero) => {
     
     valorActual.agregarAlCarrito(numero, product) 
+    
   };
 
   return (

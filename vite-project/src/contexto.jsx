@@ -10,13 +10,20 @@ function CarritoProvider (props){
 
 
 
-const agregarAlCarrito = (item) =>{
-  
+const agregarAlCarrito = (cant, item) =>{
+  console.log(cant, item)
+  setCantCarrito(cantCarrito + cant)
+  const copia = [...carrito]
+  copia.push(item)
+  setCarrito(copia)
 }
 
 const borrarDelCarrito = (id) => {}
 
-const vaciarCarrito =() => {}
+const vaciarCarrito =() => {
+  setCantCarrito(0)
+  setCarrito([])
+}
 
 const valorActual ={
     carrito: carrito,
