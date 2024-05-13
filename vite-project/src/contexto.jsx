@@ -17,7 +17,7 @@ const agregarAlCarrito = (cant, item) =>{
 const productoConCantidad = item
 productoConCantidad.cantidad = cant
 
-  copia.push(item)
+  copia.push(productoConCantidad)
   setCarrito(copia)
 }
 
