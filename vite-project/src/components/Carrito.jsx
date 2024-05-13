@@ -21,11 +21,10 @@ function Carrito() {
         {carrito.map((item) => {
        return(
           <article key={item.id}>
-            <img src={item.img} alt={item.name} />
+            {<img src={item.img} alt={item.name} /> }
             <h3>{item.name}</h3>
             <p>Precio: {item.price} {item.currency}</p>
             <p>Plataforma: {item.plataform}</p>
-            <p>Stock: {item.stock}</p>
             <p>Cantidad: {item.cantidad}</p>
           </article>
       )
