@@ -14,7 +14,13 @@ function ItemCount(props) {
     }
     const confirmar = () => {
         props.handleConfirm(numero)
-        Swal.fire("¡Producto agregado!", "", "success");
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Agregado al carrito",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
     return (
         <>
