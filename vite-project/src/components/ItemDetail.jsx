@@ -6,6 +6,7 @@ function ItemDetail({ product }) {
 
   const valorActual = useContext(contexto);
   
+  
   const handleConfirm = (numero) => {
     
     valorActual.agregarAlCarrito(numero, product) 
@@ -13,11 +14,11 @@ function ItemDetail({ product }) {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="w-full max-w-sm p-6 bg-gray-200 rounded-lg shadow-md">
+    <div className="flex justify-center items-center h-screen ">
+      <div className="w-full max-w-sm p-6 bg-gray-200 rounded-lg shadow-md gap-20">
         {product.map((product, index) => (
           <div key={index} className="text-center">
-            <h2 className="text-lg font-bold mb-2">{product.name}</h2>
+            <h2 className="text-lg font-bold mb-2">{product.name}</h2> 
             <img src={product.img} alt={product.name} className="mx-auto mb-2 rounded-lg" style={{ maxWidth: '200px' }} />
             <p className="text-sm mb-2">{product.product}</p>
             <p className="text-sm mb-2">{product.name}</p>

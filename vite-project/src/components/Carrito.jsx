@@ -16,12 +16,12 @@ function Carrito() {
   return (
 
     <div>
-      <h2 className="text-gray-800 text-3xl font-bold text-center mb-4">Carrito de Compras</h2>
+      <h2 className="text-gray-800 text-3xl font-bold text-center mb-4">MI CARRITO</h2>
       <div>
         {carrito.map((item) => {
        return(
           <article key={item.id}>
-            {<img src={item.img} alt={item.name} /> }
+            <img src={item.img} alt={item.name} /> 
             <h3>{item.name}</h3>
             <p>Precio: {item.price} {item.currency}</p>
             <p>Plataforma: {item.plataform}</p>
