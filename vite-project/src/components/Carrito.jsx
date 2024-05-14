@@ -3,22 +3,28 @@ import { contexto } from '../contexto.jsx';
 import Swal from 'sweetalert2';
 
 function Carrito() {
-  
-  const carritoContexto = useContext(contexto);
 
+  const carritoContexto = useContext(contexto);
   const { carrito, cantCarrito, precioTotal } = carritoContexto;
 
-  const handleSubmit = (e) =>{
-    e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
     Swal.fire("Compra Finalizada", "", "success");
   }
 
   return (
     <div>
       <h2 className="text-gray-800 text-3xl font-bold text-center mb-4">MI CARRITO</h2>
-      {carrito.length === 0 ? (
-        <h3 className="text-gray-800 text-xl font-semibold text-center mb-4 p-4 border border-gray-300 rounded-md">CARRITO VACÍO</h3>
-      ) : (
+
+      {/* Si el carrito está vacío, mostrar el mensaje "CARRITO VACIO" */}
+      {carrito.length === 0 && (
+        <div className="flex justify-center p-2">
+          <h3 className="border border-gray-200 p-4 rounded-md shadow-md text-center">CARRITO VACIO</h3>
+        </div>
+      )}
+
+      {/* Si el carrito tiene elementos, mostrarlos */}
+      {carrito.length > 0 && (
         <div>
           {carrito.map((item) => {
             return (
@@ -32,16 +38,33 @@ function Carrito() {
                   </div>
                 </article>
               </div>
-            );
+            )
           })}
+          
+          {/* Formulario de envío */}
           <form className="mx-auto max-w-sm" onSubmit={handleSubmit}>
             <h2 className="text-gray-800 text-2xl font-bold mb-4 text-center">Formulario de Envío</h2>
+            <div className="mb-4">
+              <input type="text" placeholder="Nombre" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+            </div>
+            <div className="mb-4">
+              <input type="text" placeholder="Apellido" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+            </div>
+            <div className="mb-4">
+              <input type="text" placeholder="Dirección" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+            </div>
+            <div className="mb-4">
+              <input type="email" placeholder="Email" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+            </div>
+            <div className="mb-4">
+              <input type="tel" placeholder="Número de Celular" title="Debe tener 10 dígitos" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+            </div>
             <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block mx-auto">Finalizar Compra</button>
           </form>
         </div>
       )}
-    </div>
-  );
-}
 
+    </div>
+  )
+}
 export default Carrito;
