@@ -15,15 +15,13 @@ function Carrito() {
   return (
     <div>
       <h2 className="text-gray-800 text-3xl font-bold text-center mb-4">MI CARRITO</h2>
-
-      {/* Si el carrito está vacío, mostrar el mensaje "CARRITO VACIO" */}
       {carrito.length === 0 && (
         <div className="flex justify-center p-2">
           <h3 className="border border-gray-200 p-4 rounded-md shadow-md text-center">CARRITO VACIO</h3>
         </div>
       )}
 
-      {/* Si el carrito tiene elementos, mostrarlos */}
+      
       {carrito.length > 0 && (
         <div>
           {carrito.map((item) => {
@@ -41,7 +39,7 @@ function Carrito() {
             )
           })}
           
-          {/* Formulario de envío */}
+          
           <form className="mx-auto max-w-sm" onSubmit={handleSubmit}>
             <h2 className="text-gray-800 text-2xl font-bold mb-4 text-center">Formulario de Envío</h2>
             <div className="mb-4">
