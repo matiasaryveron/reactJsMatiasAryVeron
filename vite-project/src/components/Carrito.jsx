@@ -20,15 +20,15 @@ function Carrito() {
       <div>
         {carrito.map((item) => {
        return(
-<div key={item} className="flex justify-center p-2">
-  <article key={item.id} className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
-    <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
-    <div>
-      <h3 className="text-sm font-semibold">{item.name}</h3>
-      <p>Cantidad: {item.cantidad}</p>
-      <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
-    </div>
-  </article>
+              <div key={item.id} className="flex justify-center p-2">
+             <article className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
+              <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
+              <div>
+              <h3 className="text-sm font-semibold">{item.name}</h3>
+                <p>Cantidad: {item.cantidad}</p>
+                <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
+              </div>
+              </article>
 </div>
       )
     })}
