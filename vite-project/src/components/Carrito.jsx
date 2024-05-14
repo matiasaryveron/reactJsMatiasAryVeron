@@ -33,9 +33,8 @@ function Carrito() {
                   <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
                 </div>
               </article>
-            </div>
-          ))}
-
+            </div> 
+          ))} 
           <button 
             onClick={vaciarCarrito} 
             className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded block mx-auto mb-4">

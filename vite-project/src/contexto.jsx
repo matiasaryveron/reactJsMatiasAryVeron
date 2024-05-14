@@ -10,22 +10,22 @@ function CarritoProvider(props) {
 
   const agregarAlCarrito = (cant, item) => {
     setCantCarrito(cantCarrito + cant);
-
-    const productoExistente = carrito.find((producto) => producto.id === item.id);
-
-    if (productoExistente) {
-      const carritoActualizado = carrito.map((producto) =>
-        producto.id === item.id
-          ? { ...producto, cantidad: producto.cantidad + cant }
-          : producto
-      );
+  
+    const productoExistenteIndex = carrito.findIndex(producto => producto.id === item.id);
+  
+    if (productoExistenteIndex !== -1) {
+      
+      const carritoActualizado = [...carrito];
+      carritoActualizado[productoExistenteIndex].cantidad += cant;
       setCarrito(carritoActualizado);
     } else {
+      
       const productoConCantidad = { ...item, cantidad: cant };
       setCarrito([...carrito, productoConCantidad]);
+      
     }
   };
-
+  
   const borrarDelCarrito = (id) => {
     const producto = carrito.find((producto) => producto.id === id);
     if (producto) {
