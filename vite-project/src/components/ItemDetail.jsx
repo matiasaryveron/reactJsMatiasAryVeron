@@ -21,6 +21,8 @@ function ItemDetail({ product }) {
             <h2 className="text-lg font-bold mb-2">{product.name}</h2> 
             <img src={product.img} alt={product.name} className="mx-auto mb-2 rounded-lg" style={{ maxWidth: '200px' }} />
             <p className="text-sm mb-2">{product.product}</p>
+            {product.plataform && (
+              <p className="text-sm mb-2">{product.plataform}</p>)}
             <p className="text-sm mb-2">{product.name}</p>
             <p className="text-sm mb-4">{product.price} {product.currency}</p>
             <div className={`p-2 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'} rounded-lg mb-2`}>

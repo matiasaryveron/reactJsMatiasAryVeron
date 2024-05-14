@@ -9,6 +9,8 @@ function CardProduct({product}) {
       <img src={product.img} alt={product.product} className="w-full h-48 object-contain" />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{product.product}</div>
+        {product.plataform && (
+              <p className="text-sm mb-2">{product.plataform}</p>)}
         <p className="text-gray-700 text-base">{product.name}</p>
         <p>{product.price} {product.currency}</p>
         <div className={`p-4 ${product.stock > 0 ? 'bg-green-200' : 'bg-red-200'}`} >

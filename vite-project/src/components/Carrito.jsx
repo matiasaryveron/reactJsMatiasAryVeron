@@ -24,6 +24,7 @@ function Carrito() {
       {carrito.length > 0 && (
         <div>
           {carrito.map((item) => {
+            console.log(carrito)
             return (
               <div key={item.id} className="flex justify-center p-2">
                 <article className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
