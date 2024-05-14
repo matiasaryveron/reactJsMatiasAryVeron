@@ -20,7 +20,7 @@ function Carrito() {
       <div>
         {carrito.map((item) => {
        return(
-<div className="flex justify-center p-2">
+<div key={item} className="flex justify-center p-2">
   <article key={item.id} className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
     <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
     <div>
@@ -30,10 +30,6 @@ function Carrito() {
     </div>
   </article>
 </div>
-
-
-
-
       )
     })}
     </div>
