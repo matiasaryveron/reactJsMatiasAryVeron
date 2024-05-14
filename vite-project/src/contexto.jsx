@@ -26,7 +26,14 @@ function CarritoProvider(props) {
     }
   };
 
-  const borrarDelCarrito = (id) => {};
+  const borrarDelCarrito = (id) => {
+    const producto = carrito.find((producto) => producto.id === id);
+    if (producto) {
+      const carritoActualizado = carrito.filter((producto) => producto.id !== id);
+      setCarrito(carritoActualizado);
+      setCantCarrito(cantCarrito - producto.cantidad);
+    }
+  };
 
   const vaciarCarrito = () => {
     setCantCarrito(0);

@@ -3,14 +3,14 @@ import { contexto } from '../contexto.jsx';
 import Swal from 'sweetalert2';
 
 function Carrito() {
-
   const carritoContexto = useContext(contexto);
-  const { carrito, cantCarrito, precioTotal } = carritoContexto;
+  const { carrito, cantCarrito, precioTotal, vaciarCarrito } = carritoContexto;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     Swal.fire("Compra Finalizada", "", "success");
-  }
+    vaciarCarrito(); 
+  };
 
   return (
     <div>
@@ -23,22 +23,25 @@ function Carrito() {
 
       {carrito.length > 0 && (
         <div>
-          {carrito.map((item) => {
-            console.log(carrito)
-            return (
-              <div key={item.id} className="flex justify-center p-2">
-                <article className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
-                  <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
-                  <div>
-                    <h3 className="text-sm font-semibold">{item.name}</h3>
-                    <p>Cantidad: {item.cantidad}</p>
-                    <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
-                  </div>
-                </article>
-              </div>
-            )
-          })}
-          
+          {carrito.map((item) => (
+            <div key={item.id} className="flex justify-center p-2">
+              <article className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
+                <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
+                <div>
+                  <h3 className="text-sm font-semibold">{item.name}</h3>
+                  <p>Cantidad: {item.cantidad}</p>
+                  <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
+                </div>
+              </article>
+            </div>
+          ))}
+
+          <button 
+            onClick={vaciarCarrito} 
+            className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded block mx-auto mb-4">
+            Vaciar Carrito
+          </button>
+
           <form className="mx-auto max-w-sm" onSubmit={handleSubmit}>
             <h2 className="text-gray-800 text-2xl font-bold mb-4 text-center">Formulario de Envío</h2>
             <div className="mb-4">
@@ -60,8 +63,8 @@ function Carrito() {
           </form>
         </div>
       )}
-
     </div>
-  )
+  );
 }
+
 export default Carrito;
