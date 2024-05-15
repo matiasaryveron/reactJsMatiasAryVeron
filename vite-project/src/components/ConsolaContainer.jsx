@@ -17,8 +17,8 @@ const miPromesa = new Promise ((res)=>{
 miPromesa
     .then((res) => {
       const id = +params.id;
-      const encontprod = res.find(item => item.id === id) || {};
-      setProducts([encontprod]);
+      const encontrado = res.find(item => item.id === id) || {};
+      setProducts([encontrado]);
     })
     .catch(() => console.log('mal'));
 

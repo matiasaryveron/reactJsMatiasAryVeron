@@ -4,12 +4,12 @@ import ItemListContainer from './ItemListContainer'
 import Productos from './Productos'
 import ConsolaContainer from './ConsolaContainer'
 import Carrito from './Carrito'
+import Destacados from './Inicio'
 
 function Main() {
   return (
     <main className='p-4 text-black grow mi-main bg-white'>
-      <img src="https://puppis.vteximg.com.br/arquivos/banner-envio-al-interior-desktop-2100x190.png?v=637751887487570000" alt="envio" />
-      <br />
+      
  <Routes>
 
 <Route path='/' element={<ItemListContainer/>} />
@@ -26,6 +26,8 @@ function Main() {
 
 </Routes>
 
+<br />
+<img src="https://puppis.vteximg.com.br/arquivos/banner-envio-al-interior-desktop-2100x190.png?v=637751887487570000" alt="envio" />
 </main>
   )
 }

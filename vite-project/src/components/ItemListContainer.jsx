@@ -36,15 +36,11 @@ function ItemListContainer(){
 
 export default ItemListContainer; */
 
-
+ 
 import React, { useEffect, useState } from 'react';
 import data from "./data.json";
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList';
-import { app } from '../firebase';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
-
 
 function ItemListContainer(){
   const [products, setProducts] = useState ([])
@@ -81,4 +77,4 @@ miPromesa.finally(() => console.log('fin'));
  );
 }
 
-export default ItemListContainer 
+export default ItemListContainer  

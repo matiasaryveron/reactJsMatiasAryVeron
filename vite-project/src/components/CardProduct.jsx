@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-
 function CardProduct({product}) {
   return (
     <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
