@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { contexto } from '../contexto.jsx';
 import Swal from 'sweetalert2';
@@ -5,6 +6,14 @@ import Swal from 'sweetalert2';
 function Carrito() {
   const carritoContexto = useContext(contexto);
   const { carrito, cantCarrito, precioTotal, vaciarCarrito } = carritoContexto;
+
+  const calcularPrecioTotal = () => {
+    let total = 0;
+    Object.keys(carrito).forEach((key) => {
+      total += carrito[key].price * carrito[key].cantidad;
+    });
+    return total;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,6 +44,7 @@ function Carrito() {
               </article>
             </div> 
           ))} 
+          <p className="text-lg font-bold text-center text-black">Precio Total: {calcularPrecioTotal()} USD</p>
           <button 
             onClick={vaciarCarrito} 
             className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded block mx-auto mb-4">
