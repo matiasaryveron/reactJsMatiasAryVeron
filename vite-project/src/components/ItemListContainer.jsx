@@ -1,80 +1,29 @@
-/* import React, { useEffect, useState } from 'react';
-import data from "./data.json";
+ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList';
-import { app } from '../firebase';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getProduct } from './functions';
 
 function ItemListContainer(){
-  const [products, setProducts] = useState ([])
+  const [product, setProduct] = useState ([])
   const params = useParams()
 
   useEffect(()=>{
-    const db = getFirestore(app)
-    const productCollection = collection (db, "product")
-  
-    const query = getDocs(productCollection)
-  
-    query.then((resultado) => {
-      const productos = resultado.docs.map(doc => doc.data());
-      setProducts(productos); 
-    }).catch(error => {
-      console.error("Error obteniendo productos:", error);
-    });
+   getProduct ()
+   .then ((resultado) => {
+    setProduct(resultado)
+   })
+
   }, []); 
 
   return (
     <>
       {
-        products.length !== 0
-        ? <ItemList products={products} />
+        product.length !== 0
+        ? <ItemList product={product} />
         : <div> Esperando productos</div>
       }
     </>
   );
 }
 
-export default ItemListContainer; */
-
- 
-import React, { useEffect, useState } from 'react';
-import data from "./data.json";
-import { useParams } from "react-router-dom"
-import ItemList from './ItemList';
-
-function ItemListContainer(){
-  const [products, setProducts] = useState ([])
-  const params = useParams()
-
-useEffect(()=>{
-const miPromesa = new Promise ((res)=>{
-  setTimeout(()=>{
-    res(data)
-  },2000)
-})
-miPromesa
-.then((res)=>{
-  if (params.id) {
-    const filterProducts = res.filter((product) => product.product.toLowerCase() == params.id)
-    setProducts(filterProducts)
-  return 
-  }
-  setProducts(res)
-  
-})
-.catch(() => console.log('mal'));
-miPromesa.finally(() => console.log('fin'));
-}, [params.id]) 
-
- return (
-  <>
-  {
-  products.length !==0
-  ? <ItemList products={products} />
-  : <div> Esperando productos</div>
-}
-  </>
- );
-}
-
-export default ItemListContainer  
+export default ItemListContainer; 

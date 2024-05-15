@@ -16,7 +16,6 @@ function Main() {
           className="bg-blue-300 hover:bg-blue-400 focus:bg-blue-400 w-12 h-12" 
         />  
       </Link>
-      
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
         <Route path='/productos' element={<Productos />} />
