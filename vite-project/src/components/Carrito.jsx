@@ -15,22 +15,22 @@ function Carrito() {
   return (
     <div>
       <h2 className="text-gray-800 text-3xl font-bold text-center mb-4">MI CARRITO</h2>
-      {carrito.length === 0 && (
+      {Object.keys(carrito).length === 0 && (
         <div className="flex justify-center p-2">
           <h3 className="border border-gray-200 p-4 rounded-md shadow-md text-center font-bold text-black">CARRITO VACIO</h3>
         </div>
       )}
 
-      {carrito.length > 0 && (
+      {Object.keys(carrito).length > 0 && (
         <div>
-          {carrito.map((item) => (
-            <div key={item.id} className="flex justify-center p-2">
+          {Object.keys(carrito).map((key) => (
+            <div key={carrito[key].id} className="flex justify-center p-2">
               <article className="border border-gray-200 p-4 rounded-md shadow-md flex items-center">
-                <img src={item.img} className="w-10 h-10 mr-2" alt={item.name} />
+                <img src={carrito[key].img} className="w-10 h-10 mr-2" alt={carrito[key].name} />
                 <div>
-                  <h3 className="text-sm font-semibold">{item.name}</h3>
-                  <p>Cantidad: {item.cantidad}</p>
-                  <p className="text-gray-600 text-xs">Precio: {item.price} {item.currency}</p>
+                  <h3 className="text-sm font-semibold">{carrito[key].name}</h3>
+                  <p>Cantidad: {carrito[key].cantidad}</p>
+                  <p className="text-gray-600 text-xs">Precio: {carrito[key].price} {carrito[key].currency}</p>
                 </div>
               </article>
             </div> 
