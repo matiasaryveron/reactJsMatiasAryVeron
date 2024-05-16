@@ -14,13 +14,11 @@ function ItemListContainer(){
    getProduct ()
    .then ((resultado) => {
     setProduct(resultado)
-    console.log(resultado)
    })
   } else {
    getProductFromCategory(params.id)
    .then((resultado)=> {
     setProduct(resultado)
-    console.log(resultado)
    })
   }
 

@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { contexto } from '../contexto.jsx';
 import Swal from 'sweetalert2';
-
+import { createSale } from './functions.js';
 function Carrito() {
   const carritoContexto = useContext(contexto);
   const { carrito, cantCarrito, precioTotal, vaciarCarrito } = carritoContexto;
@@ -19,6 +19,7 @@ function Carrito() {
     e.preventDefault();
     Swal.fire("Compra Finalizada", "", "success");
     vaciarCarrito(); 
+    /* createSales() */
   };
 
   return (
@@ -66,7 +67,7 @@ function Carrito() {
               <input type="email" placeholder="Email" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
             </div>
             <div className="mb-4">
-              <input type="tel" placeholder="Número de Celular" title="Debe tener 10 dígitos" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
+              <input type="tel" placeholder="Telefono" title="Debe tener 10 dígitos" className="mb-2 p-2 border border-gray-300 rounded-md bg-gray-100 w-full" required />
             </div>
             <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block mx-auto">Finalizar Compra</button>
           </form>

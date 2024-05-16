@@ -1,5 +1,5 @@
 import { app } from '../firebase';
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where, doc, getDoc, serverTimestamp,addDoc } from 'firebase/firestore';
 
 
 export const getProduct = () =>{  
@@ -53,3 +53,34 @@ export const getProductFromCategory =(category) =>{
 
 
 }
+export const getProductDetail = (id) => {
+    const db = getFirestore(app)
+    const productsCollection = collection(db,"products")
+    const filtro = doc(productsCollection, id)
+    const consulta = getDoc(filtro)
+
+    return consulta
+    .then((resultado)=>{
+        const producto = resultado.data()
+        return producto
+    })
+    .catch ((error) =>{
+    console.log(error)
+    })
+}
+export const createSale = () =>{
+    const db = getFirestore(app)
+    const salesCollection = collection(db, "ventas")
+
+    const venta ={
+        items:[],
+        usuario:{ nombre:"" , apellido:"", telfono:"", email:"", direccion:"" },
+        fechaDeCompra: serverTimestamp()
+    }
+    const consulta = addDoc(salesCollection, venta)
+    consulta.then((resultado) => {
+        console.log(resultado)
+    })
+    .catch((error) =>
+    console.log(error)
+)}

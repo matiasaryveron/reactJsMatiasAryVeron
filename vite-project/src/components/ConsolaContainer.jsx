@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import data from "./data.json";
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import { getProductDetail } from './functions';
 
 function ConsolasContainer(){
   const [product, setProducts] = useState ([])
@@ -25,7 +26,14 @@ miPromesa
   miPromesa.finally(() => console.log('fin'));
 }, [params.id])
 
- return (
+ 
+/* getProductDetail(id)
+.then((resultado) => {
+  setProducts(resultado)
+})
+}, []) */
+
+return (
   <>
    <ItemDetail product={product} />
   </>
