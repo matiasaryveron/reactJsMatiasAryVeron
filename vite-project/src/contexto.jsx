@@ -9,8 +9,6 @@ function CarritoProvider(props) {
   const [carrito, setCarrito] = useState({});
 
   const agregarAlCarrito = (cant, item) => {
-        
-    console.log("Carrito antes de agregar algo: " + JSON.stringify(item))
 
     if (item.id in carrito){
       const foundItem = carrito[item.id]
@@ -18,7 +16,6 @@ function CarritoProvider(props) {
       carrito[item.id] = foundItem
       setCarrito(carrito)
     }else{
-      console.log("el item no existe en el carrito")
       item.cantidad = cant
       const newCarrito = { ...carrito}
       newCarrito[item.id] = item

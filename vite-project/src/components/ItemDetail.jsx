@@ -13,7 +13,7 @@ function ItemDetail({ product }) {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen ">
+    <div className="flex justify-center items-center min-h-screen mt-16 ">
       <div className="w-full max-w-sm p-6 bg-gray-200 rounded-lg shadow-md gap-20">
           <div key={id} className="text-center">
             <h2 className="text-lg font-bold mb-2">{product.name}</h2> 
