@@ -1,19 +1,30 @@
  import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList';
-import { getProduct } from './functions';
+import { getProduct, getProductFromCategory } from './functions';
 
 function ItemListContainer(){
   const [product, setProduct] = useState ([])
   const params = useParams()
+  console.log(params)
 
   useEffect(()=>{
+
+   if (!params.id){
    getProduct ()
    .then ((resultado) => {
     setProduct(resultado)
+    console.log(resultado)
    })
+  } else {
+   getProductFromCategory(params.id)
+   .then((resultado)=> {
+    setProduct(resultado)
+    console.log(resultado)
+   })
+  }
 
-  }, []); 
+  }, [params.id]); 
 
   return (
     <>
